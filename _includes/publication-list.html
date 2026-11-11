@@ -1,5 +1,0 @@
-{% if include.items.size > 0 %}
-{% for paper in include.items %}
-<article class="paper"><h3>{% if paper.url %}<a href="{{ paper.url | relative_url }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3><p>{{ paper.authors | escape }}</p>{% if paper.venue %}<p class="note">{{ paper.venue | escape }}{% if paper.year %}, {{ paper.year }}{% endif %}</p>{% endif %}{% if paper.note %}<p class="note">{{ paper.note | escape }}</p>{% endif %}</article>
-{% endfor %}
-{% else %}<p class="empty-state">To be added. No confirmed entries are listed yet.</p>{% endif %}

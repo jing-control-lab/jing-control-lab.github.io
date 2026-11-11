@@ -1,18 +1,7 @@
 ---
-layout: default
-title: Research
+layout: redirect
+title: JCL
 permalink: /research/
-description: "Research interests in system identification, multi-agent systems, agent + control, and complex systems."
+target: /#topics
+sitemap: false
 ---
-<header class="page-header"><h1 class="page-title">Research</h1><p class="page-lead">Four connected directions: learning dynamics, coordinating agents, connecting decisions with feedback, and understanding collective behavior.</p></header>
-{% for area in site.data.research %}
-<section class="research-direction" id="{{ area.id }}" aria-labelledby="title-{{ area.id }}">
-  <div><h2 id="title-{{ area.id }}">{{ area.title | escape }}</h2><p class="note">{{ area.focus | escape }}</p></div>
-  <p>{{ area.description | escape }}</p>
-</section>
-{% endfor %}
-<section class="content-section" aria-labelledby="projects-title"><h2 id="projects-title">Projects</h2>
-{% if site.data.projects.size > 0 %}{% for project in site.data.projects %}<article class="record"><h3>{{ project.title | escape }}</h3><p>{{ project.description | escape }}</p>{% if project.url %}<a href="{{ project.url | relative_url }}">Project details →</a>{% endif %}</article>{% endfor %}
-{% else %}<p class="empty-state">Project details will be added when available.</p>{% endif %}
-</section>
-<section class="content-section" aria-labelledby="courses-title"><h2 id="courses-title">Open Courses</h2><p><a href="https://github.com/zjin73/Agent-Control-and-Grid">Agent, Control and Grid ↗</a> <span class="resource-label">External resource</span></p><p class="note">An external GitHub learning resource. It is linked here for reference and is maintained in its own repository.</p></section>

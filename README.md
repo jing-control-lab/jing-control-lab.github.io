@@ -2,29 +2,25 @@
 
 **Jing Control Lab** · [Website](https://jing-control-lab.github.io/)
 
-A lightweight Jekyll group website, published with GitHub Pages.
+My personal space for code repositories and learning records on systems, agents, and control.
 
-Navigation: Home · Course · Blog · News · Contact.
-
-Research, People, and Publications remain available at their existing URLs and are temporarily hidden from the navigation. Course links to the external learning resource.
+This is a single-page website. Home, Code, and Contact are links to sections on the same page. Code links point only to repositories maintained under this account.
 
 ## Editing
 
-See [instruction.md](instruction.md) for the Chinese maintenance guide. Content lives in `index.html`, `_pages/`, `_data/`, and `_blogs/`. No JavaScript framework, database, or login service is required.
+Read [instruction.md](instruction.md) for the Chinese maintenance guide. Update `index.html` for page content, `_data/contact.yml` for contact details, and `assets/css/group.css` for styling.
 
-The blog example is excluded from the build and marked `published: false`. Confirmed people and group publications can be added later; no personal publication record is imported. Public contact details live in `_data/contact.yml`.
+## Publishing
 
-## GitHub Pages
+GitHub Pages builds **main → / (root)** with Jekyll. Do not add `.nojekyll`.
 
-In **Settings → Pages**, choose **Deploy from a branch**, **main**, and **/ (root)**. GitHub Pages builds this Jekyll source after changes are committed. Do not add `.nojekyll`.
-
-For a local Jekyll preview with Ruby and Bundler installed:
+With Ruby and Bundler installed, local preview is available through:
 
 ```sh
 bundle install
 bundle exec jekyll serve
 ```
 
-## Source and license
+## License
 
-Layout and selected CSS patterns are adapted from [zjin73/zjin73.github.io](https://github.com/zjin73/zjin73.github.io), inspected at commit `77f8842477821d6c142345cd4955a579c7133c2d`. Only the necessary layout and styles were adapted. See [NOTICE.md](NOTICE.md) and [LICENSE](LICENSE) for attribution and the retained MIT notice.
+See [LICENSE](LICENSE) for redistribution terms and retained copyright notices.

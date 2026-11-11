@@ -1,6 +1,6 @@
 title: JCL
 name: Jing Control Lab
-description: "Jing Control Lab — system identification, multi-agent systems, agent + control, and complex systems."
+description: "My personal space for code repositories and learning records on systems, agents, and control."
 url: "https://jing-control-lab.github.io"
 baseurl: ""
 repository: "jing-control-lab/jing-control-lab.github.io"
@@ -11,7 +11,6 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  hard_wrap: false
 include:
   - _pages
 exclude:
@@ -21,25 +20,11 @@ exclude:
   - NOTICE.md
   - Gemfile
   - Gemfile.lock
-  - _blogs/README.md
-  - _blogs/template.md
   - vendor
   - node_modules
   - .bundle
   - .openai
   - preview
   - scripts
-collections:
-  blogs:
-    output: true
-    permalink: /blogs/:name/
-defaults:
-  - scope:
-      path: ""
-      type: blogs
-    values:
-      layout: post
-      nav: Blog
-      lang: en
 plugins:
   - jekyll-sitemap

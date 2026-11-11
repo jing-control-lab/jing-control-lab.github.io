@@ -1,11 +1,7 @@
 main:
   - title: Home
-    url: /
-  - title: Course
-    url: /course/
-  - title: Blog
-    url: /blogs/
-  - title: News
-    url: /news/
+    url: /#home
+  - title: Code
+    url: /#code
   - title: Contact
-    url: /contact/
+    url: /#contact
