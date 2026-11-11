@@ -13,6 +13,7 @@
 | 首页标题、简介、About the Group、Research Overview | `index.html` |
 | 四个研究方向（同时更新首页研究兴趣链接） | `_data/research.yml` |
 | Research 页的说明、Projects、Open Courses 区域 | `_pages/research.html` |
+| Course 页面及课程资源链接 | `_pages/course.html` |
 | 已确认项目 | `_data/projects.yml` |
 | 成员资料 | `_data/people.yml` |
 | 三种状态的论文 | `_data/publications.yml` |
@@ -166,8 +167,10 @@ HTML 页面中这样引用：
 
 ## 九、修改联系方式、导航和样式
 
-- 在 `_data/contact.yml` 的空字符串中填写确认后的邮箱和地址。未填写时页面显示 `To be added.`。
-- `_data/navigation.yml` 控制导航顺序，保持 News 倒数第二、Contact 最后。
+- `_data/contact.yml` 当前公开邮箱是 `zhjin201@gmail.com`，地址是 `Nanjing, Jiangsu, China`（江苏南京）；今后在这里更新。
+- `_data/navigation.yml` 控制导航顺序，当前为 Home、Course、Blog、News、Contact。导航居中，圆角胶囊显示当前页面。
+- Research、People、Publications 暂时从导航隐藏，原页面和数据仍然保留。恢复时在导航数据中添加对应名称和原路径 `/research/`、`/people/`、`/publications/`。
+- Course 的课程资源链接在 `_pages/course.html` 维护，仍链接外部仓库，不复制代码。
 - `assets/css/group.css` 顶部的 `--paper`、`--accent` 等变量控制颜色。正文为 20px，辅助文字通常为 18px。
 - 小屏布局通过 1100px、900px、700px 三个断点调整。改样式后检查手机，避免导航溢出。
 
