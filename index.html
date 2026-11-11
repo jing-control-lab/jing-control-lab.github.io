@@ -1,0 +1,37 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+<section class="profile" aria-labelledby="group-title">
+  <div class="profile-copy">
+    <h1 id="group-title">JCL</h1>
+    <p class="group-name">Jing Control Lab</p>
+    <p>We study how dynamical systems can be understood, coordinated, and controlled. Our interests connect system identification, multi-agent systems, intelligent agents, and complex systems.</p>
+    <p class="profile-note">From observations to models. From local interactions to collective behavior.</p>
+  </div>
+  {% include network.html %}
+</section>
+<section class="interests" aria-labelledby="interests-title">
+  <h2 id="interests-title">Research interests</h2>
+  <ul>{% for area in site.data.research %}<li><a href="{{ '/research/' | relative_url }}#{{ area.id }}">{{ area.title | escape }}</a></li>{% endfor %}</ul>
+</section>
+<div class="home-overview">
+  <section class="home-section news-column" aria-labelledby="news-title">
+    <div class="section-title"><h2 id="news-title">News</h2><a href="{{ '/news/' | relative_url }}">All news</a></div>
+    {% assign news_items = site.data.news | sort: 'date' | reverse %}
+    {% for item in news_items limit:3 %}
+    <article class="news-item"><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%Y.%m.%d' }}</time><p lang="{{ item.lang | default: 'en' }}">{{ item.text | escape }}</p></article>
+    {% endfor %}
+  </section>
+  <div class="background-column">
+    <section class="home-section" aria-labelledby="about-title">
+      <h2 id="about-title">About the Group</h2>
+      <div class="record"><p>Jing Control Lab is a space for exploring the links between models, decisions, and feedback. We are interested in both the mathematical foundations of control and the practical questions raised by interconnected systems.</p><p class="record-meta">This website will bring together our research directions, technical notes, and future group updates.</p></div>
+    </section>
+    <section class="home-section" aria-labelledby="overview-title">
+      <h2 id="overview-title">Research Overview</h2>
+      <div class="record"><p>Our guiding questions are how to learn useful models from data, how agents can coordinate with limited information, and how feedback can support reliable decisions in changing environments.</p><p>Across these questions, we consider uncertainty, shared constraints, and the relationship between local actions and system-wide behavior.</p><a class="text-link" href="{{ '/research/' | relative_url }}">Explore research directions →</a></div>
+    </section>
+  </div>
+</div>

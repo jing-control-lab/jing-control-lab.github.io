@@ -1,0 +1,10 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+description: "Contact information for Jing Control Lab."
+---
+<header class="page-header"><h1 class="page-title">Contact</h1><p class="page-lead">Get in touch with Jing Control Lab.</p></header>
+<section class="content-section" aria-labelledby="contact-title"><h2 id="contact-title">Contact details</h2>
+<dl class="contact-details"><div><dt>Email</dt><dd>{% if site.data.contact.email != '' %}<a href="mailto:{{ site.data.contact.email | escape }}">{{ site.data.contact.email | escape }}</a>{% else %}To be added.{% endif %}</dd></div><div><dt>Location</dt><dd>{% if site.data.contact.address != '' %}{{ site.data.contact.address | escape }}{% else %}To be added.{% endif %}</dd></div><div><dt>GitHub</dt><dd><a href="https://github.com/jing-control-lab">jing-control-lab ↗</a></dd></div></dl>
+</section>

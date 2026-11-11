@@ -1,0 +1,16 @@
+- id: system-identification
+  title: System Identification
+  focus: Learning models from observations
+  description: "How can observations reveal the dynamics of a system? We are interested in models that connect data with physical structure, and in how uncertainty and changing conditions inform model updates."
+- id: multi-agent-systems
+  title: Multi-Agent Systems
+  focus: Coordination through local interactions
+  description: "How can individual agents coordinate with limited information? Our interests include distributed decision-making, communication, and control under shared constraints."
+- id: agent-control
+  title: Agent + Control
+  focus: Connecting decisions with feedback
+  description: "How can intelligent agents act reliably in a changing physical world? We explore the relationship between learning, planning, and feedback control, with attention to feasibility and reliability."
+- id: complex-systems
+  title: Complex Systems
+  focus: Understanding collective behavior
+  description: "How do interactions shape the behavior of a whole system? We are interested in network structure, coupled dynamics, and the emergence of system-level behavior from local rules."

@@ -1,0 +1,13 @@
+---
+layout: default
+title: Blog
+permalink: /blogs/
+description: "Articles and technical notes from Jing Control Lab."
+---
+<header class="page-header"><h1 class="page-title">Blog</h1><p class="page-lead">Articles, working ideas, and technical notes on systems, agents, and control.</p></header>
+<section class="blog-list" aria-label="Blog entries">
+{% assign blog_posts = site.blogs | where_exp: 'post', 'post.published != false' | sort: 'date' | reverse %}
+{% for post in blog_posts %}
+<article class="paper blog-entry"><div class="blog-meta"><span>{{ post.category | default: 'Technical note' | escape }}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time></div><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>{% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}</article>
+{% else %}<div class="content-section"><h2>Notes to come</h2><p class="empty-state">No articles have been published yet. Future posts will appear here, newest first.</p></div>{% endfor %}
+</section>

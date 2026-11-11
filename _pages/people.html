@@ -1,0 +1,12 @@
+---
+layout: default
+title: People
+permalink: /people/
+description: "People at Jing Control Lab. Member information will be added when confirmed."
+---
+<header class="page-header"><h1 class="page-title">People</h1><p class="page-lead">The people behind Jing Control Lab.</p></header>
+<section class="content-section" aria-labelledby="members-title"><h2 id="members-title">Members</h2>
+{% if site.data.people.size > 0 %}
+{% for person in site.data.people %}<article class="person record">{% if person.photo %}<img src="{{ person.photo | relative_url }}" alt="{{ person.name | escape }}" width="120" height="120" loading="lazy">{% endif %}<div><h3>{{ person.name | escape }}</h3>{% if person.role %}<p class="record-meta">{{ person.role | escape }}</p>{% endif %}{% if person.interests %}<p>{{ person.interests | escape }}</p>{% endif %}{% if person.url %}<a href="{{ person.url | relative_url }}">Profile →</a>{% endif %}</div></article>{% endfor %}
+{% else %}<p class="empty-state">Member information will be added when confirmed.</p>{% endif %}
+</section>

@@ -1,0 +1,10 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+description: "Group publications, organized by publication status."
+---
+<header class="page-header"><h1 class="page-title">Publications</h1><p class="page-lead">Group publications, organized by status. Entries will be added after their details and group attribution are confirmed.</p></header>
+<section class="content-section" aria-labelledby="published-title"><h2 id="published-title">Published</h2>{% include publication-list.html items=site.data.publications.published %}</section>
+<section class="content-section" aria-labelledby="review-title"><h2 id="review-title">Under Review</h2>{% include publication-list.html items=site.data.publications.under_review %}</section>
+<section class="content-section" aria-labelledby="preparation-title"><h2 id="preparation-title">In Preparation</h2>{% include publication-list.html items=site.data.publications.in_preparation %}</section>
