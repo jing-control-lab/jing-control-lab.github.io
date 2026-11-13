@@ -1,7 +1,7 @@
 main:
   - title: Home
     url: /#home
-  - title: Code
-    url: /#code
-  - title: Contact
-    url: /#contact
+  - title: Resources
+    url: /#resources
+  - title: Projects
+    url: /#projects

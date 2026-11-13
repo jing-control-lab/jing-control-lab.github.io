@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title != 'Home' %}{{ page.title | escape }} · {% endif %}JCL · Jing Control Lab</title>
+  <title>{% if page.title != 'Home' %}{{ page.title | escape }} · {% endif %}sicphd · Resources &amp; Projects</title>
   <meta name="description" content="{{ site.description | escape }}">
-  <meta name="theme-color" content="#f3f6f4">
+  <meta name="theme-color" content="#f6f7f4">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="stylesheet" href="{{ '/assets/css/group.css' | relative_url }}?v=single-page-1">
+  <link rel="stylesheet" href="{{ '/assets/css/group.css' | relative_url }}?v=20261114-resources">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header"><div class="wrap"><nav aria-label="On this page">
-    {% for item in site.data.navigation.main %}<a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>{% endfor %}
-  </nav></div></header>
+  <header class="site-header"><nav class="wrap" aria-label="Main navigation">{% for item in site.data.navigation.main %}<a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>{% endfor %}</nav></header>
   <main class="wrap" id="main" tabindex="-1">{{ content }}</main>
-  <footer class="wrap"><p>© {{ 'now' | date: '%Y' }} JCL / Jing Control Lab</p></footer>
+  <footer class="wrap"><span>© {{ 'now' | date: '%Y' }} sicphd</span><span>Resources &amp; Projects</span></footer>
 </body>
 </html>

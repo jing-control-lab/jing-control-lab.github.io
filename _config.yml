@@ -1,9 +1,9 @@
-title: JCL
-name: Jing Control Lab
-description: "My personal space for code repositories and learning records on systems, agents, and control."
-url: "https://jing-control-lab.github.io"
+title: sicphd
+name: sicphd
+description: "Files, code, and projects. A small, growing collection of resources."
+url: "https://sicphd.github.io"
 baseurl: ""
-repository: "jing-control-lab/jing-control-lab.github.io"
+repository: "sicphd/sicphd.github.io"
 lang: en
 timezone: Asia/Shanghai
 encoding: utf-8
@@ -16,6 +16,7 @@ include:
 exclude:
   - README.md
   - instruction.md
+  - files/README.md
   - LICENSE
   - NOTICE.md
   - Gemfile

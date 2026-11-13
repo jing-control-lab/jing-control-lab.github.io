@@ -3,30 +3,34 @@ layout: default
 title: Home
 permalink: /
 ---
-<section class="intro" id="home" aria-labelledby="site-title">
-  <div>
-    <h1 id="site-title">JCL</h1>
-    <p class="site-name">Jing Control Lab</p>
-    <p>This is my personal space for code repositories and learning records. I use JCL to organize the code I write, the concepts I study, and the ideas I work through.</p>
-    <p class="muted intro-note">Personally maintained, one step at a time.</p>
-  </div>
-  {% include network.html %}
+<header class="intro" id="home">
+  <p class="eyebrow">RESOURCE INDEX</p>
+  <h1>sicphd<span aria-hidden="true"> /</span></h1>
+  <p>Files, code, and projects.<br>A small, growing collection of resources.</p>
+</header>
+<section id="resources" aria-labelledby="resources-title">
+  <div class="section-heading"><h2 id="resources-title">Resources</h2><span class="path">/files/</span></div>
+  <p class="section-note">Documents, notes, and downloadable files.</p>
+  {% assign resource_count = 0 %}
+  <ul class="directory" aria-label="Resource files">
+  {% assign resources = site.static_files | sort: 'path' %}
+  {% for file in resources %}
+    {% assign file_prefix = file.path | slice: 0, 7 %}
+    {% if file_prefix == '/files/' %}
+      {% assign resource_count = resource_count | plus: 1 %}
+      <li><a class="entry" href="{{ file.path | relative_url }}"><span class="file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h7l2 3h9v11H3z"/></svg></span><span class="entry-name">{{ file.path | remove_first: '/files/' | escape }}</span><span class="entry-type">{{ file.extname | remove_first: '.' | upcase | escape }}</span></a></li>
+    {% endif %}
+  {% endfor %}
+  {% if resource_count == 0 %}<li class="empty"><span class="file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h7l2 3h9v11H3z"/></svg></span><div>No files yet.<span>Resources will appear here as they are added.</span></div></li>{% endif %}
+  </ul>
 </section>
-<section class="topics" id="topics" aria-labelledby="topics-title">
-  <h2 id="topics-title">Topics I explore</h2>
-  <ul><li>System Identification</li><li>Multi-Agent Systems</li><li>Agent + Control</li><li>Complex Systems</li></ul>
+<section id="projects" aria-labelledby="projects-title">
+  <div class="section-heading"><h2 id="projects-title">Projects</h2><span class="path">/projects/</span></div>
+  <p class="section-note">Code repositories, experiments, and project documentation.</p>
+  <ul class="directory" aria-label="Projects">
+  {% for project in site.data.projects %}
+    <li><a class="entry project" href="{{ project.url | escape }}"><span class="file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 18 18 6M6 6h12v12"/></svg></span><span><strong class="entry-name">{{ project.title | escape }}</strong><span class="entry-description">{{ project.description | escape }}</span></span><span class="entry-type">{{ project.kind | default: 'REPO' | escape }}</span></a></li>
+  {% else %}<li class="empty"><span class="file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h7l2 3h9v11H3z"/></svg></span><div>No projects listed yet.<span>New projects will be collected here.</span></div></li>{% endfor %}
+  </ul>
 </section>
-<div class="overview">
-  <section id="code" aria-labelledby="code-title">
-    <h2 id="code-title">Code repositories</h2>
-    <div class="section-copy"><p>Code, experiments, and implementations maintained under this account.</p><a class="repository-link" href="https://github.com/jing-control-lab">Explore JCL on GitHub</a></div>
-  </section>
-  <section aria-labelledby="learning-title">
-    <h2 id="learning-title">Learning records</h2>
-    <div class="section-copy"><p>I keep track of concepts, derivations, and practical questions as I learn about systems, agents, and control.</p><p class="muted">A personal record of learning and work in progress.</p></div>
-  </section>
-</div>
-<section class="contact" id="contact" aria-labelledby="contact-title">
-  <h2 id="contact-title">Contact</h2>
-  <div><a href="mailto:{{ site.data.contact.email | escape }}">{{ site.data.contact.email | escape }}</a><span>{{ site.data.contact.address | escape }}</span></div>
-</section>
+<aside class="source"><p>Browse the source and repositories.</p><a href="https://github.com/sicphd">github.com/sicphd <span aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></aside>
