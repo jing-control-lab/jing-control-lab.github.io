@@ -4,7 +4,7 @@
 仓库：https://github.com/sicphd/sicphd.github.io  
 发布分支：`main`。账号与主页仓库已分别改名为 `sicphd`、`sicphd.github.io`。
 
-这是个人资源与项目目录，仅有一个主内容页面。导航 Home / Resources / Projects 跳转至本页区域；不再展示课题组介绍、个人履历、联系方式或博客。保留旧页面地址的站内跳转。
+这是个人资源与项目目录，仅有一个主内容页面。没有顶部导航，Resources / Projects 直接展示在 Home 首页；不再展示课题组介绍、个人履历、联系方式或博客。保留旧页面地址的站内跳转。
 
 ## 文件与页面对应关系
 
@@ -13,7 +13,6 @@
 | 首页标题、介绍、栏目文字与空状态 | `index.html` |
 | 下载文件 | `files/`，支持子目录 |
 | 项目链接、名称、说明 | `_data/projects.yml` |
-| 页内导航 | `_data/navigation.yml` |
 | 字体、颜色、布局、手机适配 | `assets/css/group.css` |
 | 页脚、网页标题、通用结构 | `_layouts/default.html` |
 | 网站地址与 Jekyll 设置 | `_config.yml` |

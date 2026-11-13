@@ -8,11 +8,10 @@
   <meta name="theme-color" content="#f6f7f4">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="stylesheet" href="{{ '/assets/css/group.css' | relative_url }}?v=20261114-resources">
+  <link rel="stylesheet" href="{{ '/assets/css/group.css' | relative_url }}?v=20261114-home-only">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="wrap" aria-label="Main navigation">{% for item in site.data.navigation.main %}<a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>{% endfor %}</nav></header>
   <main class="wrap" id="main" tabindex="-1">{{ content }}</main>
   <footer class="wrap"><span>© {{ 'now' | date: '%Y' }} sicphd</span><span>Resources &amp; Projects</span></footer>
 </body>

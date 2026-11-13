@@ -1,7 +1,0 @@
-main:
-  - title: Home
-    url: /#home
-  - title: Resources
-    url: /#resources
-  - title: Projects
-    url: /#projects

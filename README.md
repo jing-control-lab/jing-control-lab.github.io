@@ -1,6 +1,6 @@
 # sicphd / Resources & Projects
 
-A lightweight resource index for files, code, and future projects.
+A single Home page for files, code, and future projects, with no navigation bar.
 
 - Website: https://sicphd.github.io/
 - Repository: https://github.com/sicphd/sicphd.github.io
